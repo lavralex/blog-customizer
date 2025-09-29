@@ -18,6 +18,7 @@ export const useEnterSubmit = ({
 				onChange((isOpen: boolean) => !isOpen);
 			}
 		};
+
 		placeholderEl.addEventListener('keydown', handleEnterKeyDown);
 
 		return () => {

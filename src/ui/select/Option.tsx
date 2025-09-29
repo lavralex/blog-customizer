@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import type { MouseEventHandler } from 'react';
 import clsx from 'clsx';
 import { OptionType } from 'src/constants/articleProps';
-import { Text } from 'src/ui/text';
+import { Text } from '../text';
 import { isFontFamilyClass } from './helpers/isFontFamilyClass';
 import { useEnterOptionSubmit } from './hooks/useEnterOptionSubmit';
 
@@ -18,6 +18,7 @@ export const Option = (props: OptionProps) => {
 		option: { value, title, optionClassName, className },
 		onClick,
 	} = props;
+
 	const optionRef = useRef<HTMLLIElement>(null);
 
 	const handleClick =
@@ -40,7 +41,9 @@ export const Option = (props: OptionProps) => {
 			tabIndex={0}
 			data-testid={`select-option-${value}`}
 			ref={optionRef}>
+			{' '}
 			<Text family={isFontFamilyClass(className) ? className : undefined}>
+				{' '}
 				{title}
 			</Text>
 		</li>
