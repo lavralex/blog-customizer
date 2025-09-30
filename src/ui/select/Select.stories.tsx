@@ -25,7 +25,7 @@ const SelectWithState = () => {
 				selected={selected}
 				onChange={setSelected}
 				options={options}
-				title='Название выпадающего списка'
+				title='Название радиогруппы'
 			/>
 		</>
 	);
